@@ -32,17 +32,24 @@ html = getHtml("http://www.pythonchallenge.com/pc/def/ocr.html")
 	
 # print(html)
 # print(getStr(html)[1].strip())
+#从源码中提取的字符串，并去掉首尾空格
 strs = getStr(html)[1].strip()
 # web = ""
 # for i in strs:
 	# if i.isalpha():
 		# web = web + i
+		
+# print(web)  #  equality		
+# 引用链接http://blog.csdn.net/weixin_35955795/article/details/52448345
 newstr =""
-for i in strs:
+
+#获取字符串中包含的字符种类
+for i in strs:				
 	if not i in newstr:
 		newstr = newstr + i
-		
-for j in newstr:
+
+#获取每个字符的个数		
+for j in newstr:			
 	print(j + " : " + str(strs.count(j)))
 	
-#print(web)  #  equality
+
