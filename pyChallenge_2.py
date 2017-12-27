@@ -33,10 +33,16 @@ html = getHtml("http://www.pythonchallenge.com/pc/def/ocr.html")
 # print(html)
 # print(getStr(html)[1].strip())
 strs = getStr(html)[1].strip()
-web = ""
+# web = ""
+# for i in strs:
+	# if i.isalpha():
+		# web = web + i
+newstr =""
 for i in strs:
-	if i.isalpha():
-		web = web + i
+	if not i in newstr:
+		newstr = newstr + i
+		
+for j in newstr:
+	print(j + " : " + str(strs.count(j)))
 	
-
-print(web)
+#print(web)  #  equality
